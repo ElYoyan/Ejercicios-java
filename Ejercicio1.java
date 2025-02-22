@@ -1,22 +1,25 @@
-// Escribir un programa que solicite un valor entero al usuario y determine si es par o impar
-
-package ejercicios;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ciclos;
 import java.util.Scanner;
 
+/**
+ *
+ * @author Est01
+ */
 public class Ejercicio1 {
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar un número entero: ");
-        int numero = scanner.nextInt();
-
-        if (numero%2 == 0) {
-            System.out.println("El numero: " +numero+ " es un numero Par");
-        } else {
-            System.out.println("El numero: " +numero+ " es un numero Impar");
-        }
+        System.out.println("Escriba una letra en Mayuscula: ");
+        String letra = scanner.next();
+        
+        String minusculas = letra.toLowerCase();
+        System.out.println("La letra ingresada en minusula es: "+ minusculas);
         
         scanner.close();
+  
     }
+    
 }
-

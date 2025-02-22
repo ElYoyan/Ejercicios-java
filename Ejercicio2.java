@@ -1,23 +1,33 @@
-// Escribir un programa que solicite un valor entero al usuario y determine si es positivo o negativo. 
-
-package ejercicios;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ciclos;
 import java.util.Scanner;
-
+        
+/**
+ *
+ * @author Est01
+ */
 public class Ejercicio2 {
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrece un número entero: ");
-        int numero = scanner.nextInt();
-
-        if (numero>=0) {
-            System.out.println("El número es Positivo");
-        } else {
-            System.out.println("El numero es Negativo");
+        
+        int estudiantes = 10;
+        int sumaDeEdades = 0;
+        int edad;
+        
+        for (int i = 1 ; i <= estudiantes; i++){
+            System.out.println("Ingrese la edad del estudiantes numero " +i+ " : ");
+            edad = scanner.nextInt();
+            sumaDeEdades += edad;
         }
-
-        scanner.close();
-    }
-
+        
+       double promedio = sumaDeEdades/ (double)estudiantes;
+       
+       System.out.println("El promedio de edades de los estudiantes es: " +promedio);
+        
+       scanner.close();
+}
     
 }

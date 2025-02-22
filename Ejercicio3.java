@@ -1,26 +1,43 @@
-//Pedir al usuario un valor. Si el valor es positivo, pedir un segundo valor y calcular la suma, resta y producto de ambos. Mostrar los resultados por pantalla. 
-
-package ejercicios;
+package ciclos;
 import java.util.Scanner;
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 public class Ejercicio3 {
-
-    public static void main(String[] args) {
+    public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese un numero entero: ");
-        int numero1 = scanner.nextInt();
-
-        if(numero1 >= 0){
-            System.out.println("Ingrese otro numero entero: ");
-            int numero2 = scanner.nextInt();
-
-            System.out.println("La suma de los número ingresados es: " + (numero1 + numero2) );
-            System.out.println("La resta de los número ingresados es: " + (numero1 - numero2) );
-            System.out.println("La multiplicación de los número ingresados es: " + (numero1 * numero2) );
-        } else {
-            System.out.println("Su número es negativo");
+        
+        double sumaNotas = 0;
+        int numeroNotas = 7;
+        double nota;
+        
+        for(int i=1 ; i <= numeroNotas;i++){
+            
+            while (true){
+                System.out.println("Ingrese la nota de 0 a 5 numero "+i+" : ");
+                nota = scanner.nextInt();
+            
+                if(nota>=0 && nota<=5){
+                    break;
+                } else {
+                    System.out.println("Valor invalido");  
+                }
+            }
+            
+            sumaNotas += nota;
+           
         }
+        
+        double promedio = sumaNotas/ (double) numeroNotas;
+        
+        System.out.println("El promedio del alumno es: " +promedio);
+        
         scanner.close();
+        
+       
+        
+               
     }
     
 }
